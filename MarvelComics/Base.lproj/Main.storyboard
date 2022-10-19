@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,39 +17,135 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EN7-Qb-URc">
-                                <rect key="frame" x="175" y="416" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ma3-Kh-9Gf">
+                                <rect key="frame" x="0.0" y="59" width="393" height="593.66666666666663"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="19U-5R-R8W">
+                                <rect key="frame" x="15" y="662.66666666666663" width="363" height="140.33333333333337"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fdv-7k-HPP">
+                                        <rect key="frame" x="0.0" y="0.0" width="363" height="30"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3uY-PZ-bLt">
+                                        <rect key="frame" x="0.0" y="40" width="363" height="14"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kha-aR-J0D">
+                                        <rect key="frame" x="0.0" y="64" width="363" height="16.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4hB-aW-Jy8">
+                                        <rect key="frame" x="0.0" y="90.333333333333371" width="363" height="50"/>
+                                        <color key="backgroundColor" red="0.91759672619999999" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="XkA-8K-Pf9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Find out more"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Find out more">
+                                            <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="findOutMoreBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="33L-LT-j54"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ma3-Kh-9Gf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="45W-97-L4W"/>
+                            <constraint firstItem="Ma3-Kh-9Gf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="DZR-Y8-WYy"/>
+                            <constraint firstItem="19U-5R-R8W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="Gch-UW-rS1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="19U-5R-R8W" secondAttribute="bottom" constant="15" id="XNU-cg-cvz"/>
+                            <constraint firstItem="Ma3-Kh-9Gf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eBX-fs-OFa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="19U-5R-R8W" secondAttribute="trailing" constant="15" id="hFI-Vq-SDU"/>
+                            <constraint firstItem="19U-5R-R8W" firstAttribute="top" secondItem="Ma3-Kh-9Gf" secondAttribute="bottom" constant="10" id="iMr-R5-JSn"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="authorLbl" destination="3uY-PZ-bLt" id="KOi-bu-WJh"/>
+                        <outlet property="comicBookImageView" destination="Ma3-Kh-9Gf" id="h0c-KQ-7DU"/>
+                        <outlet property="descriptionLbl" destination="kha-aR-J0D" id="OZe-IR-pw7"/>
+                        <outlet property="titleLbl" destination="Fdv-7k-HPP" id="FNj-8b-HcU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3393" y="4"/>
+            <point key="canvasLocation" x="3334" y="4"/>
         </scene>
-        <!--Search View Controller-->
+        <!--Search-->
         <scene sceneID="NA2-5Z-aPY">
             <objects>
                 <viewController storyboardIdentifier="SearchViewController" id="RPl-BB-ATZ" customClass="SearchViewController" customModule="MarvelComics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aie-tU-wW5">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pLI-jL-82D">
+                                <rect key="frame" x="0.0" y="159" width="393" height="693"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="RPl-BB-ATZ" id="8sj-2O-3jO"/>
+                                    <outlet property="delegate" destination="RPl-BB-ATZ" id="Q4S-R5-W26"/>
+                                </connections>
+                            </tableView>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="cD7-1y-FFP">
+                                <rect key="frame" x="0.0" y="103" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="RPl-BB-ATZ" id="cNd-bx-6en"/>
+                                </connections>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start typing to find a particular comics." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tYs-tU-YjK">
+                                <rect key="frame" x="0.0" y="404" width="393" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="LyI-IP-D6U"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tYs-tU-YjK" firstAttribute="centerX" secondItem="pLI-jL-82D" secondAttribute="centerX" id="7xJ-xH-6nH"/>
+                            <constraint firstItem="pLI-jL-82D" firstAttribute="trailing" secondItem="LyI-IP-D6U" secondAttribute="trailing" id="AEV-ss-t5L"/>
+                            <constraint firstItem="pLI-jL-82D" firstAttribute="top" secondItem="cD7-1y-FFP" secondAttribute="bottom" id="FZG-MR-t1l"/>
+                            <constraint firstItem="pLI-jL-82D" firstAttribute="leading" secondItem="LyI-IP-D6U" secondAttribute="leading" id="GuG-JD-ls6"/>
+                            <constraint firstAttribute="bottom" secondItem="pLI-jL-82D" secondAttribute="bottom" id="U77-OL-2Mz"/>
+                            <constraint firstItem="cD7-1y-FFP" firstAttribute="top" secondItem="LyI-IP-D6U" secondAttribute="top" id="kEK-O5-ly3"/>
+                            <constraint firstItem="cD7-1y-FFP" firstAttribute="leading" secondItem="pLI-jL-82D" secondAttribute="leading" id="nCX-Fh-5js"/>
+                            <constraint firstItem="cD7-1y-FFP" firstAttribute="trailing" secondItem="pLI-jL-82D" secondAttribute="trailing" id="psZ-mc-a5H"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="cKo-vF-a4N"/>
+                    <navigationItem key="navigationItem" title="Search" id="cKo-vF-a4N"/>
+                    <connections>
+                        <outlet property="infoLbl" destination="tYs-tU-YjK" id="yS5-bu-G3Z"/>
+                        <outlet property="searchBar" destination="cD7-1y-FFP" id="wFo-d5-ka7"/>
+                        <outlet property="tableView" destination="pLI-jL-82D" id="dOX-P7-3xa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sdb-ee-iH2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2427" y="325"/>
+            <point key="canvasLocation" x="2426.7175572519081" y="324.64788732394368"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Marvel Comics-->
         <scene sceneID="kcN-Na-W5G">
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" id="6pn-F3-Bpe" customClass="HomeViewController" customModule="MarvelComics" customModuleProvider="target" sceneMemberID="viewController">
@@ -56,20 +153,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="My0-VV-qir">
-                                <rect key="frame" x="159" y="409" width="75" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Button"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bsq-xF-DQc">
+                                <rect key="frame" x="0.0" y="155" width="393" height="697"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
-                                    <action selector="btnClicked:" destination="6pn-F3-Bpe" eventType="touchUpInside" id="MB6-db-bie"/>
+                                    <outlet property="dataSource" destination="6pn-F3-Bpe" id="U6Z-b7-AUG"/>
+                                    <outlet property="delegate" destination="6pn-F3-Bpe" id="zZi-US-Ewb"/>
                                 </connections>
-                            </button>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Odl-Iz-cf5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bsq-xF-DQc" firstAttribute="trailing" secondItem="Odl-Iz-cf5" secondAttribute="trailing" id="O7x-yb-43B"/>
+                            <constraint firstItem="bsq-xF-DQc" firstAttribute="leading" secondItem="Odl-Iz-cf5" secondAttribute="leading" id="Zsi-BC-5EQ"/>
+                            <constraint firstAttribute="bottom" secondItem="bsq-xF-DQc" secondAttribute="bottom" id="mOI-c6-OOl"/>
+                            <constraint firstItem="bsq-xF-DQc" firstAttribute="top" secondItem="Odl-Iz-cf5" secondAttribute="top" id="wnS-cx-P8Z"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="miO-VE-cuq"/>
+                    <navigationItem key="navigationItem" title="Marvel Comics" id="miO-VE-cuq"/>
+                    <connections>
+                        <outlet property="tableView" destination="bsq-xF-DQc" id="264-xZ-sXo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Pl-QX-pmX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -79,7 +184,7 @@
         <scene sceneID="vKt-Fe-HWE">
             <objects>
                 <tabBarController id="pxO-vX-ZKy" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VlG-Ie-L3u">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="fill" id="VlG-Ie-L3u">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -93,15 +198,31 @@
             </objects>
             <point key="canvasLocation" x="679" y="4"/>
         </scene>
-        <!--Item 1-->
+        <!--Navigation Controller-->
         <scene sceneID="KHr-rh-quA">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iHe-LZ-aCO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="iG2-rN-Tdj"/>
+                    <tabBarItem key="tabBarItem" title="" id="iG2-rN-Tdj">
+                        <imageReference key="image" image="house.fill" catalog="system" symbolScale="large" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color red="0.91759672619999999" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                        <inset key="largeContentSizeImageInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CmZ-YD-CJo">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="CmZ-YD-CJo">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="35"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -112,15 +233,30 @@
             </objects>
             <point key="canvasLocation" x="1635.8778625954199" y="-337.32394366197184"/>
         </scene>
-        <!--Item 2-->
+        <!--Navigation Controller-->
         <scene sceneID="e1v-ga-zGc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kT1-mZ-Bkf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="CkA-Q5-may"/>
+                    <tabBarItem key="tabBarItem" title="" id="CkA-Q5-may">
+                        <imageReference key="image" image="magnifyingglass" catalog="system" symbolScale="large" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color red="0.91759672619999999" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NZH-gZ-NkJ">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="35"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -133,6 +269,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

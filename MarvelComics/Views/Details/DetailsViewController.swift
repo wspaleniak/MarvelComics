@@ -6,25 +6,37 @@
 //
 
 import UIKit
+import Kingfisher
 
 class DetailsViewController: UIViewController {
 
+    @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var authorLbl: UILabel!
+    @IBOutlet weak var descriptionLbl: UILabel!
+    @IBOutlet weak var comicBookImageView: UIImageView!
+    
+    var comicBook: ComicBook!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "Details"
-        // Do any additional setup after loading the view.
+        setupView()
+        populateView()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func findOutMoreBtnClicked(_ sender: UIButton) {
     }
-    */
+    
+    private func setupView() {
+        navigationItem.largeTitleDisplayMode = .never
+        title = comicBook.title
+    }
+    
+    private func populateView() {
+        titleLbl.text = comicBook.title
+        authorLbl.text = comicBook.author
+        descriptionLbl.text = comicBook.description
+        comicBookImageView.kf.setImage(with: comicBook.image?.asUrl)
+    }
 
 }

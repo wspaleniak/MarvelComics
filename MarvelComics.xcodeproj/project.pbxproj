@@ -17,9 +17,19 @@
 		92006D6028FFFBF400B121AA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92006D5F28FFFBF400B121AA /* SearchViewController.swift */; };
 		92006D6228FFFC1100B121AA /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92006D6128FFFC1100B121AA /* DetailsViewController.swift */; };
 		92006D6828FFFE7A00B121AA /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92006D6728FFFE7A00B121AA /* ViewController+Extension.swift */; };
+		92006D6A2900023900B121AA /* ComicBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92006D692900023900B121AA /* ComicBook.swift */; };
+		92006D6E2900073A00B121AA /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92006D6C2900073A00B121AA /* CustomTableViewCell.swift */; };
+		92006D6F2900073A00B121AA /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92006D6D2900073A00B121AA /* CustomTableViewCell.xib */; };
+		92006D712900094100B121AA /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92006D702900094100B121AA /* UIView+Extension.swift */; };
+		92006D74290014A900B121AA /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92006D73290014A900B121AA /* CardView.swift */; };
+		92FDDB732900202C00884D19 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FDDB722900202C00884D19 /* String+Extension.swift */; };
+		F35BB3A16C8E1C68DBF9623D /* Pods_MarvelComics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8214B80C3D988C0192BE31A7 /* Pods_MarvelComics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		21599552B9479810D350054F /* Pods-MarvelComics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelComics.debug.xcconfig"; path = "Target Support Files/Pods-MarvelComics/Pods-MarvelComics.debug.xcconfig"; sourceTree = "<group>"; };
+		7BBEC89C26FF5F3A959147B4 /* Pods-MarvelComics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelComics.release.xcconfig"; path = "Target Support Files/Pods-MarvelComics/Pods-MarvelComics.release.xcconfig"; sourceTree = "<group>"; };
+		8214B80C3D988C0192BE31A7 /* Pods_MarvelComics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelComics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92006D3F28FFF96E00B121AA /* MarvelComics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelComics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92006D4228FFF96E00B121AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92006D4428FFF96E00B121AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +42,12 @@
 		92006D5F28FFFBF400B121AA /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		92006D6128FFFC1100B121AA /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		92006D6728FFFE7A00B121AA /* ViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
+		92006D692900023900B121AA /* ComicBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicBook.swift; sourceTree = "<group>"; };
+		92006D6C2900073A00B121AA /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		92006D6D2900073A00B121AA /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		92006D702900094100B121AA /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		92006D73290014A900B121AA /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		92FDDB722900202C00884D19 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +55,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F35BB3A16C8E1C68DBF9623D /* Pods_MarvelComics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07E21342CDB331B63A193E83 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				21599552B9479810D350054F /* Pods-MarvelComics.debug.xcconfig */,
+				7BBEC89C26FF5F3A959147B4 /* Pods-MarvelComics.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		516521AABF162AFD701EB84A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8214B80C3D988C0192BE31A7 /* Pods_MarvelComics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		92006D3628FFF96E00B121AA = {
 			isa = PBXGroup;
 			children = (
 				92006D4128FFF96E00B121AA /* MarvelComics */,
 				92006D4028FFF96E00B121AA /* Products */,
+				07E21342CDB331B63A193E83 /* Pods */,
+				516521AABF162AFD701EB84A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,6 +154,8 @@
 			isa = PBXGroup;
 			children = (
 				92006D6728FFFE7A00B121AA /* ViewController+Extension.swift */,
+				92006D702900094100B121AA /* UIView+Extension.swift */,
+				92FDDB722900202C00884D19 /* String+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -132,6 +170,8 @@
 		92006D6528FFFC5000B121AA /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				92006D722900148D00B121AA /* CardView */,
+				92006D6B290002FA00B121AA /* CustomTableViewCell */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -139,8 +179,26 @@
 		92006D6628FFFC5D00B121AA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				92006D692900023900B121AA /* ComicBook.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		92006D6B290002FA00B121AA /* CustomTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				92006D6C2900073A00B121AA /* CustomTableViewCell.swift */,
+				92006D6D2900073A00B121AA /* CustomTableViewCell.xib */,
+			);
+			path = CustomTableViewCell;
+			sourceTree = "<group>";
+		};
+		92006D722900148D00B121AA /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				92006D73290014A900B121AA /* CardView.swift */,
+			);
+			path = CardView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,9 +208,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92006D5628FFF96E00B121AA /* Build configuration list for PBXNativeTarget "MarvelComics" */;
 			buildPhases = (
+				2CB4FC96E7473DF4B68B61F1 /* [CP] Check Pods Manifest.lock */,
 				92006D3B28FFF96E00B121AA /* Sources */,
 				92006D3C28FFF96E00B121AA /* Frameworks */,
 				92006D3D28FFF96E00B121AA /* Resources */,
+				AC97FE7C008DC1A3B6080862 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -203,23 +263,71 @@
 			files = (
 				92006D5228FFF96E00B121AA /* LaunchScreen.storyboard in Resources */,
 				92006D4F28FFF96E00B121AA /* Assets.xcassets in Resources */,
+				92006D6F2900073A00B121AA /* CustomTableViewCell.xib in Resources */,
 				92006D4A28FFF96E00B121AA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2CB4FC96E7473DF4B68B61F1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MarvelComics-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC97FE7C008DC1A3B6080862 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MarvelComics/Pods-MarvelComics-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MarvelComics/Pods-MarvelComics-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MarvelComics/Pods-MarvelComics-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		92006D3B28FFF96E00B121AA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92006D6E2900073A00B121AA /* CustomTableViewCell.swift in Sources */,
+				92006D6A2900023900B121AA /* ComicBook.swift in Sources */,
 				92006D6028FFFBF400B121AA /* SearchViewController.swift in Sources */,
 				92006D4328FFF96E00B121AA /* AppDelegate.swift in Sources */,
+				92FDDB732900202C00884D19 /* String+Extension.swift in Sources */,
 				92006D4D28FFF96E00B121AA /* MarvelComics.xcdatamodeld in Sources */,
 				92006D6828FFFE7A00B121AA /* ViewController+Extension.swift in Sources */,
 				92006D4528FFF96E00B121AA /* SceneDelegate.swift in Sources */,
 				92006D5E28FFFBE100B121AA /* HomeViewController.swift in Sources */,
+				92006D712900094100B121AA /* UIView+Extension.swift in Sources */,
+				92006D74290014A900B121AA /* CardView.swift in Sources */,
 				92006D6228FFFC1100B121AA /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,6 +470,7 @@
 		};
 		92006D5728FFF96E00B121AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21599552B9479810D350054F /* Pods-MarvelComics.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -393,6 +502,7 @@
 		};
 		92006D5828FFF96E00B121AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BBEC89C26FF5F3A959147B4 /* Pods-MarvelComics.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CustomTableViewCell" rowHeight="220" id="KGk-i7-Jjw" customClass="CustomTableViewCell" customModule="MarvelComics" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="450" height="220"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="450" height="220"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yKR-at-OIy" customClass="CardView" customModule="MarvelComics" customModuleProvider="target">
+                        <rect key="frame" x="15" y="10" width="420" height="200"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="plO-Hf-OoT">
+                                <rect key="frame" x="0.0" y="0.0" width="120" height="200"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="IQy-6d-zRx"/>
+                                    <constraint firstAttribute="width" constant="120" id="cej-Q4-3ND"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="gRE-06-cwf">
+                                <rect key="frame" x="140" y="10" width="260" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avengers #39" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAH-om-XiR">
+                                        <rect key="frame" x="0.0" y="0.0" width="260" height="30"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="written by Jason Aaron" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhA-iw-3Qs">
+                                        <rect key="frame" x="0.0" y="30" width="260" height="14"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nv9-sW-dvA">
+                                <rect key="frame" x="140" y="69" width="260" height="98"/>
+                                <string key="text">This is the best comic book has ever made and I love read it everyday so dont waste my time and go out. This is the best comic book has ever made and I love read it everyday so dont waste my time and go out.</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gRE-06-cwf" firstAttribute="top" secondItem="yKR-at-OIy" secondAttribute="top" constant="10" id="Cat-Rt-YXo"/>
+                            <constraint firstItem="plO-Hf-OoT" firstAttribute="leading" secondItem="yKR-at-OIy" secondAttribute="leading" id="IAz-Zz-8b3"/>
+                            <constraint firstItem="plO-Hf-OoT" firstAttribute="top" secondItem="yKR-at-OIy" secondAttribute="top" id="Jb5-KK-Owy"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="nv9-sW-dvA" secondAttribute="bottom" constant="15" id="LfG-aU-YvY"/>
+                            <constraint firstItem="nv9-sW-dvA" firstAttribute="leading" secondItem="plO-Hf-OoT" secondAttribute="trailing" constant="20" id="c1Y-m6-vgw"/>
+                            <constraint firstAttribute="trailing" secondItem="nv9-sW-dvA" secondAttribute="trailing" constant="20" id="ejM-p6-ioS"/>
+                            <constraint firstItem="gRE-06-cwf" firstAttribute="leading" secondItem="plO-Hf-OoT" secondAttribute="trailing" constant="20" id="mcI-WP-zWi"/>
+                            <constraint firstAttribute="trailing" secondItem="gRE-06-cwf" secondAttribute="trailing" constant="20" id="oEH-8V-FCF"/>
+                            <constraint firstAttribute="bottom" secondItem="plO-Hf-OoT" secondAttribute="bottom" id="r2t-dg-VPX"/>
+                            <constraint firstItem="nv9-sW-dvA" firstAttribute="top" secondItem="gRE-06-cwf" secondAttribute="bottom" constant="15" id="tUm-fc-ZBs"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="yKR-at-OIy" secondAttribute="trailing" constant="15" id="7Dw-Nv-VAD"/>
+                    <constraint firstItem="yKR-at-OIy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="aMs-CW-r3z"/>
+                    <constraint firstAttribute="bottom" secondItem="yKR-at-OIy" secondAttribute="bottom" constant="10" id="syr-qH-1Q3"/>
+                    <constraint firstItem="yKR-at-OIy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="ve6-Yb-SNT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="authorLbl" destination="nhA-iw-3Qs" id="fsh-6E-Dta"/>
+                <outlet property="comicBookImageView" destination="plO-Hf-OoT" id="ffJ-Oh-DrM"/>
+                <outlet property="descriptionLbl" destination="nv9-sW-dvA" id="Jzd-uC-DZ8"/>
+                <outlet property="titleLbl" destination="MAH-om-XiR" id="P39-dj-vOX"/>
+            </connections>
+            <point key="canvasLocation" x="190.76923076923077" y="81.042654028436019"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
