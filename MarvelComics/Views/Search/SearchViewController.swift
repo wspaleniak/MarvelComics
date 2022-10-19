@@ -20,7 +20,7 @@ class SearchViewController: UIViewController {
         .init(id: "01", title: "Avengers", author: "Jason Aaron", description: "This is the best comic book has ever made and I love read it everyday so dont waste my time and go out. This is the best comic book has ever made and I love read it everyday so dont waste my time and go out. This is the best comic book has ever made and I love read it everyday so dont waste my time and go out", image: "https://picsum.photos/100/200"),
         .init(id: "02", title: "Spider-Man", author: "Henry Abrams", description: "This is the best comic book has ever made and I love read it everyday so dont waste my time and go out. This is the best comic book has ever made and I love read it everyday so dont waste my time and go out. This is the best comic book has ever made and I love read it everyday so dont waste my time and go out", image: "https://picsum.photos/100/200"),
         .init(id: "03", title: "Star Wars", author: "Mariko Tamaki", description: "This is the best comic book has ever made and I love read it everyday so dont waste my time and go out. This is the best comic book has ever made and I love read it everyday so dont waste my time and go out. This is the best comic book has ever made and I love read it everyday so dont waste my time and go out", image: "https://picsum.photos/100/200"),
-        .init(id: "02", title: "Spider-Man", author: "Henry Abrams", description: "This is the best comic book has ever made and I love read it everyday so dont waste my time and go out. This is the best comic book has ever made and I love read it everyday so dont waste my time and go out. This is the best comic book has ever made and I love read it everyday so dont waste my time and go out", image: "https://picsum.photos/100/200")
+        .init(id: "04", title: "Batman", author: "Panicz Panicz", description: "This is the best comic book has ever made and I love read it everyday so dont waste my time and go out. This is the best comic book has ever made and I love read it everyday so dont waste my time and go out. This is the best comic book has ever made and I love read it everyday so dont waste my time and go out", image: "https://picsum.photos/100/200")
     ]
     
     var filteredComics: [ComicBook] = []
@@ -36,7 +36,6 @@ class SearchViewController: UIViewController {
             UINib(nibName: CustomTableViewCell.identifier, bundle: nil),
             forCellReuseIdentifier: CustomTableViewCell.identifier)
     }
-
 }
 
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
@@ -82,7 +81,10 @@ extension SearchViewController: UISearchBarDelegate {
                 infoLbl.text = "We didn't find such a comic book."
             }
         }
-        filteredComics = Array(Set(filteredComics))
         tableView.reloadData()
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
     }
 }

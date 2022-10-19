@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct ComicBook: Hashable {
+struct ComicBook: Codable {
     let id, title, author, description, image: String?
 }

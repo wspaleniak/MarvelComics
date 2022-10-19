@@ -23,6 +23,9 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         registerCells()
+        
+        let request = NetworkService.shared.fetchComics()
+        print(String(describing: request))
     }
     
     private func registerCells() {
