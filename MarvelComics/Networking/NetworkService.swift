@@ -12,9 +12,8 @@ struct NetworkService {
     static let shared = NetworkService()
     private init() { }
     
-    let apiKeys = ApiKeys()
-    
-    func fetchComics() -> URLRequest {
+    func fetchComics(completion: @escaping(Result<ApiResult, Error>) -> Void) {
+        let apiKeys = ApiKeys()
         let parameters = [
             "format":"comic",
             "formatType":"comic",
@@ -27,7 +26,7 @@ struct NetworkService {
             "hash":"\(apiKeys.hash())"
         ]
         
-        return createRequest(route: .fetchComics, method: .get, parameters: parameters)!
+        request(route: .fetchComics, method: .get, parameters: parameters, completion: completion)
     }
     
     
@@ -37,15 +36,56 @@ struct NetworkService {
                                      parameters: [String:Any]? = nil,
                                      completion: @escaping(Result<T, Error>) -> Void) {
         
-        //?
+        guard let request = createRequest(route: route, method: .get, parameters: parameters) else {
+            completion(.failure(AppErrors.unknownError))
+            return
+        }
+        URLSession.shared.dataTask(with: request) {
+            data, response, error in
+            
+            var result: Result<Data, Error>?
+            
+            if let data = data {
+                result = .success(data)
+//                let jsonResponse = try? JSONSerialization.jsonObject(with: data)
+//                print(jsonResponse ?? "Wystąpił error podczas JSONSerialization")
+            } else if let error = error {
+                result = .failure(error)
+                print("Wystąpił error podczas URLSession")
+            }
+            
+            DispatchQueue.main.async {
+                self.handleResposne(result: result, completion: completion)
+            }
+        }.resume()
     }
     
     
     
-    private func handleRequest<T: Codable>(result: Result<Data, Error>?,
+    private func handleResposne<T: Codable>(result: Result<Data, Error>?,
                                            completion: (Result<T, Error>) -> Void) {
         
-        //?
+        guard let result = result else {
+            completion(.failure(AppErrors.unknownError))
+            return
+        }
+        
+        switch result {
+        case .success(let data):
+            guard let response = try? JSONDecoder().decode(ApiResponse<T>.self, from: data) else {
+                completion(.failure(AppErrors.errorDecoding))
+                return
+            }
+            guard let data = response.data else {
+                completion(.failure(AppErrors.unknownError))
+                return
+            }
+            
+            completion(.success(data))
+            
+        case .failure(let error):
+            completion(.failure(error))
+        }
     }
     
     

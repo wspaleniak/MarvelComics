@@ -19,17 +19,18 @@ class DetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        setupView()
+        
+        navigationItem.largeTitleDisplayMode = .never
+        navigationController?.navigationBar.isHidden = false
+        
         populateView()
     }
     
-    @IBAction func findOutMoreBtnClicked(_ sender: UIButton) {
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = false
     }
     
-    private func setupView() {
-        navigationItem.largeTitleDisplayMode = .never
-        title = comicBook.title
+    @IBAction func findOutMoreBtnClicked(_ sender: UIButton) {
     }
     
     private func populateView() {

@@ -17,20 +17,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ma3-Kh-9Gf">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Ma3-Kh-9Gf">
                                 <rect key="frame" x="0.0" y="59" width="393" height="593.66666666666663"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="19U-5R-R8W">
                                 <rect key="frame" x="15" y="662.66666666666663" width="363" height="140.33333333333337"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fdv-7k-HPP">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fdv-7k-HPP">
                                         <rect key="frame" x="0.0" y="0.0" width="363" height="30"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3uY-PZ-bLt">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3uY-PZ-bLt">
                                         <rect key="frame" x="0.0" y="40" width="363" height="14"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -90,7 +90,7 @@
             </objects>
             <point key="canvasLocation" x="3334" y="4"/>
         </scene>
-        <!--Search-->
+        <!--Search View Controller-->
         <scene sceneID="NA2-5Z-aPY">
             <objects>
                 <viewController storyboardIdentifier="SearchViewController" id="RPl-BB-ATZ" customClass="SearchViewController" customModule="MarvelComics" customModuleProvider="target" sceneMemberID="viewController">
@@ -106,8 +106,9 @@
                                     <outlet property="delegate" destination="RPl-BB-ATZ" id="Q4S-R5-W26"/>
                                 </connections>
                             </tableView>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="cD7-1y-FFP">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="cD7-1y-FFP">
                                 <rect key="frame" x="0.0" y="103" width="393" height="56"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="RPl-BB-ATZ" id="cNd-bx-6en"/>
@@ -134,7 +135,7 @@
                             <constraint firstItem="cD7-1y-FFP" firstAttribute="trailing" secondItem="pLI-jL-82D" secondAttribute="trailing" id="psZ-mc-a5H"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Search" id="cKo-vF-a4N"/>
+                    <navigationItem key="navigationItem" id="cKo-vF-a4N"/>
                     <connections>
                         <outlet property="infoLbl" destination="tYs-tU-YjK" id="yS5-bu-G3Z"/>
                         <outlet property="searchBar" destination="cD7-1y-FFP" id="wFo-d5-ka7"/>

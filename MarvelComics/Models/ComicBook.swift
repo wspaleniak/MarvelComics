@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct ComicBook: Codable {
+struct ComicBook {
     let id, title, author, description, image: String?
 }
